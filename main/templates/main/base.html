@@ -1,0 +1,43 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href=" {% static 'main/css/style.css' %} ">
+    <link rel="stylesheet" href=" {% static 'main/css/normalize.css' %} ">
+</head>
+<body class="body_background" style="background-color: #eef8ed" >
+    <header class="header-container">
+        <div class="header-container flex">
+            <h1 class="title">Frontend-разработчик</h1>
+        </div>
+    </header>
+
+    <main class="main">
+    <div class="section section__menu flex ">
+        <div class="menu-content">
+            <ul class="list-reset menu-of-links flex">
+                <li class="link_for_menu"><a href="{% url 'main' %}" class="menu-link">Главная</a></li>
+                <li class="link_for_menu"><a href="{% url 'demand' %}" class="menu-link">Востребованность</a></li>
+                <li class="link_for_menu"><a href="{% url 'geography' %}" class="menu-link">География</a></li>
+                <li class="link_for_menu"><a href="{% url 'skills' %}" class="menu-link">Навыки</a></li>
+                <li class="link_for_menu"><a href="{% url 'last_vacancies' %}" class="menu-link">Последние вакансии</a></li>
+            </ul>
+        </div>
+        {% block content %}{% endblock %}
+    </div>
+    </main>
+
+    {% block downside %}{% endblock %}
+
+    <footer class="flex footer_descr">
+        <p class="footer_text">Мосина Яна Алексеевна</p>
+        <p class="footer_text">РИ-210946</p>
+    </footer>
+</body>
+</html>
