@@ -34,7 +34,10 @@ body {
     font-weight: 400;
     background-color: #ffffff;
 }
-
+.image_base{
+    width: 120px;
+    height: 120px;
+}
 .list-reset {
     margin: 0;
     padding: 0;
@@ -89,7 +92,6 @@ body {
 
 .section__menu {
     margin-left: 50px;
-    height: 285px;
 }
 
 .menu-title {
@@ -141,7 +143,6 @@ body {
 }
 
 .menu-content {
-    overflow: hidden;
     padding-bottom: 40px;
     padding-top: 40px;
 }
@@ -169,7 +170,19 @@ body {
     font-size: 40px;
     line-height: 50px;
 }
-
+.card-subtitle{
+    color: #7ca168;
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 50px;
+    margin: 10px 0;
+}
+.card-title{
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 50px;
+    margin-bottom: 0;
+}
 /* main */
 
 .info {
@@ -310,7 +323,7 @@ body {
 }
 
 .table_for_demand {
-    margin-top: 170px;
+    /*margin-top: 170px;*/
     margin-right: 130px;
 }
 

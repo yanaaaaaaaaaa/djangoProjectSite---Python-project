@@ -2,13 +2,36 @@
 {% load static %}
 
 {% block title %}
-Последние вакансии
+    Последние вакансии
 {% endblock %}
 
 {% block content %}
     <div class="section__demand">
-        <h1 class="title_of_section">Последние вакансии</h1>
+        <h1 class="section_title">Последние вакансии</h1>
+        <div class="row">
+            {% for vac in last_vacancies %}
+                <div class="col-12 pb-3">
+                    <div class="card">
+                        <div class="card-body">
+                            <h4 class="card-title pb-2">{{ vac.name }}</h4>
+                            <h6 class="card-subtitle">Компания</h6>
+                            <p class="card-text">{{ vac.employer_name }}</p>
+                            <h6 class="card-subtitle">Город</h6>
+                            <p class="card-text">{{ vac.area_name }}</p>
+                            <h6 class="card-subtitle">Зарплата</h6>
+                            <p class="card-text">{{ vac.html_salary }}</p>
+                            <h6 class="card-subtitle">Навыки</h6>
+                            <p class="card-text">{{ vac.html_skills }}</p>
+                             <h6 class="card-subtitle">Дата публикации</h6>
+                            <p class="card-text">{{ vac.html_date }}</p>
+                            <h5 class="card-subtitle mb-2">Описание</h5>
+                            <div class="vac-description">
+                                {{ vac.description | safe }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
-
-
 {% endblock %}
